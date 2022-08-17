@@ -1,0 +1,50 @@
+.container {
+  display: grid;
+  background-color: yellow;
+  height: 450px;
+  /* grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr; */
+  /* row-gap: 10px; */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.box {
+  border: 1px solid blue;
+  height: 50px;
+  width: 50px;
+  background-color: brown;
+}
+
+.container2 {
+  background-color: aqua;
+  height: 450px;
+}
+
+.item1 {
+  display: block;
+  /* height: 125px;
+  width: 150px; */
+  background-color: green;
+  border: 1px solid gray;
+}
+.item2 {
+  display: block;
+  background-color: yellow;
+  height: 100px;
+  width: 75px;
+}
+
+.item3 {
+  display: inline;
+  background-color: red;
+  height: 100px;
+  width: 125px;
+}
+
+.item4 {
+  display: inline-block;
+  background-color: yellowgreen;
+  height: 150px;
+  width: 150px;
+}
