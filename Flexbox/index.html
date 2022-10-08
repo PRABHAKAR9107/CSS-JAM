@@ -6,39 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexbox</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       .container {
-        height: 450px;
-
+        height: 250px;
+        border: 1px solid black;
         display: flex;
+        width: 500px;
+        flex-wrap: wrap;
         /* flex-direction: row-reverse; */
         /* justify-content: center; */
         /* flex-wrap: wrap !important; */
 
-        align-items: center;
+        /* align-items: flex-end; */
         /* flex-flow: row-reverse wrap; */
+        justify-content: center;
+        align-content: center;
+        /* align-items: center; */
+        /* align-content: flex-center; */
       }
       .box {
         border: 2px groove green;
-        height: 150px;
-        width: 150px;
+        height: 50px;
+        width: 50px;
         margin: 10px;
       }
       #box2 {
         /* order: 2; comes after in the container */
-        flex-grow: 3;
+        /* flex-grow: 3; */
       }
 
       #box4 {
         /* order: -1; it comes before in the container */
-        flex-shrink: 2;
+        /* flex-shrink: 2; */
+      }
+      .flex-container ul {
+        display: flex;
+        gap: 1em;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+      }
+
+      .flex-container ul {
+        list-style: none;
+      }
+
+      ul > li {
+        margin-right: 0.5em;
+      }
+
+      header {
+        background-color: green;
+        margin: 0;
+        padding: 0;
+        height: 8vh;
+      }
+
+      header a {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+      }
+
+      .search-container {
+        display: inline-flex;
+        flex: 1 1 300px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        margin: 1em;
+      }
+
+      .searchBox {
+        border: none;
+        flex: 1;
+        resize: none;
+        outline: none;
+        background: transparent;
+      }
+      .search-img {
+        display: block;
+        text-align: center;
+        margin: 2.5px;
+      }
+
+      .searchButton {
+        color: white;
+        background-color: blue;
+        border-radius: 8px;
+        border: 0;
+        padding: 0.25rem;
       }
     </style>
   </head>
   <body>
+    <header>
+      <a href="/">LOGO</a>
+      <nav class="navbar">
+        <div class="flex-container">
+          <ul>
+            <li>Hello</li>
+            <li>Hi</li>
+            <li>Hey</li>
+            <li>Good</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="search-container">
+      <img
+        class="search-img"
+        src="./search.png"
+        alt="search-icon"
+        style="height: 24px; width: 32px"
+      />
+      <input
+        class="searchBox"
+        type="search"
+        name="search"
+        placeholder="Search for..."
+      />
+      <input type="submit" value="Search" class="searchButton" />
+    </div>
+
     <div class="container">
       <div class="box" id="box1">Box1</div>
       <div class="box" id="box2">Box2</div>
       <div class="box" id="box3">Box3</div>
+      <div class="box" id="box4">Box4</div>
+      <div class="box" id="box5">Box5</div>
+      <div class="box" id="box6">Box6</div>
+      <div class="box" id="box4">Box4</div>
+      <div class="box" id="box4">Box4</div>
+      <div class="box" id="box4">Box4</div>
+      <div class="box" id="box4">Box4</div>
+      <div class="box" id="box4">Box4</div>
       <div class="box" id="box4">Box4</div>
     </div>
   </body>
